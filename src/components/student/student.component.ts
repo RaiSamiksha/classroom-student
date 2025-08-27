@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-student',
@@ -10,11 +10,16 @@ import { Component, Input } from '@angular/core';
 })
 export class StudentComponent {
   @Input() studentData: any;
-classroom: any;
+ classroom: any;
+ @Output() deleteStudent = new EventEmitter<string>();
 
   ngOnInit() {
     debugger;
     console.log(this.studentData);
+  }
+
+  delete(student:any) {
+    this.deleteStudent.emit(student);
   }
 
 }

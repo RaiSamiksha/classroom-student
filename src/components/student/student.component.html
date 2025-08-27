@@ -10,5 +10,6 @@
       Attendance: {{ student.attendance.presentDays }}/
       {{ student.attendance.presentDays + student.attendance.absentDays }}
     </div>
+    <button (click)="delete(student)">Delete</button>
   </div>
 </div>

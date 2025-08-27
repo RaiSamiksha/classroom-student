@@ -4,5 +4,5 @@
   </h2>
 
   <!-- Pass only this classroom's students to child -->
-  <app-student [studentData]="classroom.students"></app-student>
+  <app-student [studentData]="classroom.students" (deleteStudent)="removeStudent(classroom, $event)"></app-student>
 </div>

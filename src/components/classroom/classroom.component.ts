@@ -16,4 +16,11 @@ export class ClassroomComponent {
     console.log(this.classroomData);
   }
 
+   removeStudent(classroom: any, student: any) {
+    const idx = classroom.students.indexOf(student);
+    if (idx > -1) {
+      classroom.students.splice(idx, 1);
+    }
+  }
+
 }
