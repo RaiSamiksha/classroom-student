@@ -1,0 +1,8 @@
+<div *ngFor="let classroom of classroomData" class="classroom-section">
+  <h2 class="classroom-title">
+    {{ classroom.className }} ({{ classroom.classroomId }})
+  </h2>
+
+  <!-- Pass only this classroom's students to child -->
+  <app-student [studentData]="classroom.students"></app-student>
+</div>

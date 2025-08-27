@@ -1,0 +1,14 @@
+<div class="student-container">
+  <div class="student-card" *ngFor="let student of studentData">
+    <h3>{{ student.firstName }} {{ student.lastName }}</h3>
+    <p><strong>Email:</strong> {{ student.email }}</p>
+    <p><strong>Math:</strong> {{ student.grades?.math }}</p>
+    <p><strong>Science:</strong> {{ student.grades?.science }}</p>
+    <p><strong>English:</strong> {{ student.grades?.english }}</p>
+    <p><strong>History:</strong> {{ student.grades?.history }}</p>
+    <div class="attendance">
+      Attendance: {{ student.attendance.presentDays }}/
+      {{ student.attendance.presentDays + student.attendance.absentDays }}
+    </div>
+  </div>
+</div>
